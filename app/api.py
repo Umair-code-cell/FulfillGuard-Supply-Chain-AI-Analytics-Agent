@@ -10,7 +10,11 @@ from .agent import investigate, AgentResult
 from .baseline import investigate_offline
 from .store import database_path, connect
 
-app=FastAPI(title='FulfillGuard',version='1.0.0',description='Evidence-grounded operations AI with an auditable offline baseline')
+app = FastAPI(
+    title="FulfillGuard — Supply Chain AI Analytics Agent",
+    version="1.0.0",
+    description="LLM-assisted delivery performance analytics with SQL tools, evidence verification, and an auditable offline baseline.",
+)
 
 class AskRequest(BaseModel):
     question: str=Field(min_length=5,max_length=1500)

@@ -1,6 +1,6 @@
-# FulfillGuard
+# FulfillGuard — Supply Chain AI Analytics Agent
 
-**Evidence-grounded AI-assisted delivery analytics** · Python · SQL · Groq LLM · FastAPI · Docker
+**LLM-Powered Supply Chain Analytics | Python · SQL · Groq LLM · FastAPI · Docker**
 
 FulfillGuard is a read-only investigation prototype for **historical e-commerce delivery operations**. It lets analysts ask supported delivery-performance questions in natural language, executes allowlisted SQL tools, and attaches auditable evidence to numerical findings. A deterministic, non-LLM baseline is provided for comparison and offline demonstrations.
 

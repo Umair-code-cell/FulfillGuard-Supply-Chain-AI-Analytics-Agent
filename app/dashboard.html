@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FulfillGuard | AI Operations Investigator</title><style>
+<title>FulfillGuard | Supply Chain AI Analytics Agent</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#132236;background:#f7f9fc}*{box-sizing:border-box}
 body{margin:0}header{background:#101f36;color:#fff;padding:28px max(calc((100% - 1080px)/2),22px)}h1{margin:0;font-size:31px;letter-spacing:-.8px}header p{opacity:.79;margin:7px 0 0}
 main{max-width:1080px;margin:30px auto;padding:0 22px}.row{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}@media(max-width:700px){.row{grid-template-columns:1fr}}
@@ -9,7 +9,7 @@ button,select{font:inherit;border-radius:8px;padding:11px 15px;border:1px solid 
 select{background:white;margin-right:10px}.buttons{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:15px}.pill{font-size:12px;background:#eef4fb;color:#16487c;padding:6px 10px;border-radius:20px}
 pre{font:12px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;word-break:break-word;background:#f0f3f8;padding:16px;border-radius:8px;max-height:400px;overflow:auto}
 small,.muted{color:#566679}h2{margin:0 0 14px;font-size:20px}h3{font-size:14px;margin:15px 0 7px}.error{color:#9c2424}.metric{display:inline-block;margin:0 12px 8px 0}ul{padding-left:20px}li{margin:6px 0}
-</style></head><body><header><h1>FulfillGuard</h1><p>Evidence-grounded AI operations investigation · Tool execution · Traceability · Evaluation</p></header>
+</style></head><body><header><h1>FulfillGuard — Supply Chain AI Analytics Agent</h1><p>Evidence-grounded AI operations investigation · Tool execution · Traceability · Evaluation</p></header>
 <main><div class="row"><section class="panel"><h2>Investigation</h2><label for="q">Business question</label><textarea id="q">Compare SP late delivery rates between July 2018 and August 2018.</textarea><div class="buttons"><select id="mode" aria-label="Execution mode"><option value="baseline">Offline baseline (no LLM)</option><option value="llm">LLM tool-calling agent</option></select><button id="run">Run investigation</button></div><p><small>Offline mode is a deterministic comparator, not AI. LLM mode requires GROQ_API_KEY. Never infer causes from correlations.</small></p></section><section class="panel"><h2>System status</h2><div id="status">Checking database…</div><h3>Example questions</h3><ul><li>What share of deliveries were late in July 2018?</li><li>Compare SP late delivery rates between July 2018 and August 2018.</li><li>Breakdown late deliveries by seller state in August 2018.</li></ul></section></div>
 <section id="result" class="panel" style="display:none"><h2>Evidence-backed answer</h2><p id="summary"></p><div id="metrics"></div><h3>Evidence</h3><ul id="evidence"></ul><h3>Suggested checks</h3><ul id="checks"></ul><h3>Limitations</h3><ul id="limits"></ul><div class="buttons"><button id="traceToggle" type="button">Show tool trace</button><span id="runtime" class="muted"></span></div><pre id="trace" hidden></pre></section>
 </main><script>
