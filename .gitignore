@@ -1,0 +1,41 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python and IDE artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+.DS_Store
+
+# Datasets and generated local artifacts
+data/raw/
+data/*.db
+data/*.sqlite*
+data/*.csv
+data/*.manifest.json
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.tar.gz
+*.log
+
+# Runtime evaluation results (cases are version-controlled)
+eval/*report*.json
+eval/*report*.md
+
+# Personal notes and local scratch work
+notes_private/
+learning_journal/

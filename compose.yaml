@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    environment:
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-openai/gpt-oss-120b}
+      FG_DB_PATH: /code/data/${FG_DB_FILENAME:-olist.db}
+    volumes:
+      - ./data:/code/data:ro
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
